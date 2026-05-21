@@ -1,0 +1,32 @@
+CASO DE TESTE
+
+Teste 1 - Cadastro válido
+
+Passos:
+1. Abrir o sistema
+2. Escolher opção cadastrar
+3. Inserir nome válido
+4. Inserir idade válida
+
+Resultado esperado:
+Cliente cadastrado com sucesso
+
+
+Teste 2 - Listar sem clientes
+
+Passos:
+1. Abrir sistema
+2. Escolher listar
+
+Resultado esperado:
+Mensagem "Nenhum cliente cadastrado"
+
+
+Teste 3 - Idade negativa
+
+Passos:
+1. Cadastrar cliente
+2. Inserir idade -5
+
+Resultado esperado:
+Mensagem "Idade negativa, tente novamente:"
