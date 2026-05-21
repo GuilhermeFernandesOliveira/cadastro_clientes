@@ -11,7 +11,6 @@ typedef struct {
 Cliente clientes[MAX];
 int total = 0;
 int i = 0;
-int idade;
 
 void cadastrar() {
     if (total >= MAX) {
