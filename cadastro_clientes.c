@@ -11,6 +11,7 @@ typedef struct {
 Cliente clientes[MAX];
 int total = 0;
 int i = 0;
+int idade;
 
 void cadastrar() {
     if (total >= MAX) {
@@ -23,7 +24,13 @@ void cadastrar() {
 
     printf("Idade: ");
     scanf("%d", &clientes[total].idade);
-
+    
+    if (clientes[total].idade < 0){
+		while (clientes[total].idade < 0) {
+			printf("Idade negativa, tente novamente:");
+		    scanf("%d", &clientes[total].idade);
+		}
+	}
     total++;
     printf("Cliente cadastrado com sucesso\n");
 }
