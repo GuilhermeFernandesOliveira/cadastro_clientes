@@ -1,5 +1,3 @@
-- Sistema de Cadastro em C
-
 Projeto desenvolvido em linguagem C com foco em lógica de programação e testes de software.
 
 - Funcionalidades:
