@@ -9,8 +9,8 @@ typedef struct {
 } Cliente;
 
 Cliente clientes[MAX];
+
 int total = 0;
-int i = 0;
 
 void cadastrar() {
     if (total >= MAX) {
@@ -18,10 +18,10 @@ void cadastrar() {
         return;
     }
 
-    printf("Nome: ");
+    printf("\nNome: ");
     scanf(" %[^\n]", clientes[total].nome);
-
-    printf("Idade: ");
+    
+    printf("\nIdade: ");
     scanf("%d", &clientes[total].idade);
     
     if (clientes[total].idade < 0){
@@ -31,25 +31,61 @@ void cadastrar() {
 		}
 	}
     total++;
-    printf("Cliente cadastrado com sucesso\n");
+    printf("\nCliente cadastrado com sucesso\n");
 }
 
 void listar() {
+	int i;
+	
     if (total == 0) {
-        printf("Nenhum cliente cadastrado\n");
+        printf("\nNenhum cliente cadastrado\n");
         return;
     }
 
     for (i = 0; i < total; i++) {
-        printf("Nome: %s | Idade: %d\n", clientes[i].nome, clientes[i].idade);
+        printf("\nNome: %s | Idade: %d\n", clientes[i].nome, clientes[i].idade);
     }
 }
+
+void editar(){
+	int NumEdit;
+	int i;
+	
+	if (total == 0) {
+		printf("\nNenum cliente cadastrado\n");
+		return;
+	}
+	
+	for (i = 0; i < total; i++){
+		printf("\n%d: Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
+	}
+	   printf("\n\nQual cadastro gostaria de editar? (Insira o ID do usuario)\n");
+	   scanf("%d", &NumEdit);
+	   NumEdit--;
+	   
+
+	while(NumEdit < 0 || NumEdit >= total){
+		printf("\nID invalido, tente novamente:");
+		scanf("%d", &NumEdit);
+		NumEdit--;
+	}
+	   
+	printf("\nNome: ");
+    scanf(" %[^\n]", clientes[NumEdit].nome);
+
+    printf("\nIdade: ");
+    scanf("%d", &clientes[NumEdit].idade);
+
+    printf("\nEdicao realizada com sucesso!\n");
+
+}
+
 
 int main() {
     int opcao;
 
     do {
-        printf("\n1 - Cadastrar\n2 - Listar\n0 - Sair\n");
+        printf("\n1 - Cadastrar\n2 - Listar\n3 - Editar\n0 - Sair\n\n");
         scanf("%d", &opcao);
 
         switch(opcao) {
@@ -59,6 +95,9 @@ int main() {
             case 2:
                 listar();
                 break;
+            case 3:
+            	editar();
+            	break;
         }
     } while(opcao != 0);
 
