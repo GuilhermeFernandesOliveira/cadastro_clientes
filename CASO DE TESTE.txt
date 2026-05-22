@@ -12,10 +12,10 @@ Resultado esperado:
 Cliente cadastrado com sucesso
 
 
-Teste 2 - Listar sem clientes
+Teste 2 - Listar/Editar sem clientes
 
 Passos:
-1. Abrir sistema
+1. Abrir o sistema
 2. Escolher listar
 
 Resultado esperado:
@@ -25,8 +25,34 @@ Mensagem "Nenhum cliente cadastrado"
 Teste 3 - Idade negativa
 
 Passos:
-1. Cadastrar cliente
-2. Inserir idade -5
+1. Abrir o sistema
+2. Cadastrar cliente
+3. Inserir idade -5
 
 Resultado esperado:
 Mensagem "Idade negativa, tente novamente:"
+
+
+Teste 4 - Editar Clientes
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar cliente
+3. Escolher a opção Editar
+4. Escolher o cliente de acordo com o ID
+5. Editar as informações 
+
+Resultado esperado:
+Mensagem: "Edição de cadastro com sucesso!"
+
+
+Teste 5 - ID inexistente/negativo
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar Cliente
+3. Escolher a opção Editar
+4. Inserir ID -2 (ou um ID que não existe)
+
+Resultado esperado:
+Mensagem: "ID invalido, tente novamente:"
