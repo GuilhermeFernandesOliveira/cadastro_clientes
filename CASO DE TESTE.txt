@@ -1,6 +1,15 @@
 CASO DE TESTE
 
-Teste 1 - Cadastro válido
+Teste 1 - Opção inválida
+
+Passos:
+1. Abrir o sistema
+2. Inserir uma opção que não esta aparecendo no menu
+
+Resultado esperado:
+Mensagem: "Opção inválida, tente novamente:"
+
+Teste 2 - Cadastro válido
 
 Passos:
 1. Abrir o sistema
@@ -12,7 +21,7 @@ Resultado esperado:
 Cliente cadastrado com sucesso
 
 
-Teste 2 - Listar/Editar sem clientes
+Teste 3 - Listar/Editar sem clientes
 
 Passos:
 1. Abrir o sistema
@@ -22,7 +31,7 @@ Resultado esperado:
 Mensagem "Nenhum cliente cadastrado"
 
 
-Teste 3 - Idade negativa
+Teste 4 - Idade negativa
 
 Passos:
 1. Abrir o sistema
@@ -33,7 +42,7 @@ Resultado esperado:
 Mensagem "Idade negativa, tente novamente:"
 
 
-Teste 4 - Editar Clientes
+Teste 5 - Editar Clientes
 
 Passos:
 1. Abrir o sistema
@@ -46,7 +55,7 @@ Resultado esperado:
 Mensagem: "Edição de cadastro com sucesso!"
 
 
-Teste 5 - ID inexistente/negativo
+Teste 6 - ID inexistente/negativo
 
 Passos:
 1. Abrir o sistema
