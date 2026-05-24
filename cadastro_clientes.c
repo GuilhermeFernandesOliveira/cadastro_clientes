@@ -98,8 +98,11 @@ int main() {
             case 3:
             	editar();
             	break;
+            default:
+            	printf("\nOpcao invalida, tente novamente:\n ");
+            	break;
         }
     } while(opcao != 0);
-
     return 0;
+    
 }
