@@ -4,11 +4,10 @@ Teste 1 - Opção inválida
 
 Passos:
 1. Abrir o sistema
-2. Inserir uma opção que não está aparecendo no menu
+2. Inserir uma opção que não esta aparecendo no menu
 
 Resultado esperado:
 Mensagem: "Opção inválida, tente novamente:"
-
 
 Teste 2 - Cadastro válido
 
@@ -49,7 +48,7 @@ Passos:
 1. Abrir o sistema
 2. Cadastrar cliente
 3. Escolher a opção Editar
-4. Inserir opção 3 (Opção inexistente/inválida)
+4. Inserir opção 7 (Opção inexistente/inválida)
 
 Resultado esperado:
 Mensagem: "Opção inválida, tente novamente:"
@@ -79,7 +78,7 @@ Passos:
 5 Inserir ID -2 (ou um ID que não existe)
 
 Resultado esperado:
-Mensagem: "ID invalido, tente novamente:"
+Mensagem: "ID inválido, tente novamente:"
 
 
 Teste 8 - Excluir cadastro
@@ -92,4 +91,16 @@ Passos:
 5. Escolher o ID correspondente ao qual Cadastro gostaria de Excluir
 
 Resultado esperado:
-Mensagem: "Exclusão de cadastro com sucesso!"
+Mensagem: "Exclusão de Cadastro com sucesso!"
+
+
+Teste 9 - Voltar ao menu
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um Cliente
+3. Escolher a opção Editar
+4. Escolher a opção Voltar ao menu
+
+Resultado esperado:
+Voltar ao menu inicial novamente
