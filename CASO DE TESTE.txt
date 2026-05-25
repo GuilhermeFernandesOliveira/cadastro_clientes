@@ -4,10 +4,11 @@ Teste 1 - Opção inválida
 
 Passos:
 1. Abrir o sistema
-2. Inserir uma opção que não esta aparecendo no menu
+2. Inserir uma opção que não está aparecendo no menu
 
 Resultado esperado:
 Mensagem: "Opção inválida, tente novamente:"
+
 
 Teste 2 - Cadastro válido
 
@@ -18,20 +19,20 @@ Passos:
 4. Inserir idade válida
 
 Resultado esperado:
-Cliente cadastrado com sucesso
+Mensagem: "Cliente cadastrado com sucesso!"
 
 
 Teste 3 - Listar/Editar sem clientes
 
 Passos:
 1. Abrir o sistema
-2. Escolher listar
+2. Escolher Listar (ou Editar)
 
 Resultado esperado:
-Mensagem "Nenhum cliente cadastrado"
+Mensagem: "Nenhum cliente cadastrado"
 
 
-Teste 4 - Idade negativa
+Teste 4 - Idade negativa no Cadastro
 
 Passos:
 1. Abrir o sistema
@@ -39,29 +40,56 @@ Passos:
 3. Inserir idade -5
 
 Resultado esperado:
-Mensagem "Idade negativa, tente novamente:"
+Mensagem: "Idade negativa, tente novamente:"
 
 
-Teste 5 - Editar Clientes
+Teste 5 - Opção inexistente/inválida na seção Editar
 
 Passos:
 1. Abrir o sistema
 2. Cadastrar cliente
 3. Escolher a opção Editar
-4. Escolher o cliente de acordo com o ID
-5. Editar as informações 
+4. Inserir opção 3 (Opção inexistente/inválida)
+
+Resultado esperado:
+Mensagem: "Opção inválida, tente novamente:"
+
+
+Teste 6 - Editar cadastro
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar cliente
+3. Escolher a opção Editar
+4. Escolher a opção de Editar Cadastro
+5. Escolher o cadastro que quer editar de acordo com o ID
+6. Editar as informações 
 
 Resultado esperado:
 Mensagem: "Edição de cadastro com sucesso!"
 
 
-Teste 6 - ID inexistente/negativo
+Teste 7 - ID inexistente/negativo na seção de Editar as informações de um Cadastro ou na seção de Excluir um Cadastro.
 
 Passos:
 1. Abrir o sistema
 2. Cadastrar Cliente
 3. Escolher a opção Editar
-4. Inserir ID -2 (ou um ID que não existe)
+4. Escolher a opção de Editar as informações de um Cadastro (Ou Excluir um Cadastro)
+5 Inserir ID -2 (ou um ID que não existe)
 
 Resultado esperado:
 Mensagem: "ID invalido, tente novamente:"
+
+
+Teste 8 - Excluir cadastro
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar Cliente
+3. Escolher a opção Editar
+4. Escolher a opção Excluir um Cadastro
+5. Escolher o ID correspondente ao qual Cadastro gostaria de Excluir
+
+Resultado esperado:
+Mensagem: "Exclusão de cadastro com sucesso!"
