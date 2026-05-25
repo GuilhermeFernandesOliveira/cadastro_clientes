@@ -3,7 +3,8 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
 - Funcionalidades:
   Cadastro de clientes, 
   Listagem de clientes, 
-  Edição de clientes,  
+  Edição no cadastro de clientes,
+  Exclusão de cadastros de clientes,   
   Estrutura utilizando vetor e struct, 
   Casos de teste documentados.
 
