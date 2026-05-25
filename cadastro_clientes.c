@@ -54,7 +54,7 @@ void editar_exluir(){
 	int excluir;
 	
 	if (total == 0) {
-		printf("\nNenum cliente cadastrado\n");
+		printf("\nNenhum cliente cadastrado\n");
 		return;
 	}
 	
