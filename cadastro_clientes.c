@@ -31,7 +31,7 @@ void cadastrar() {
 		}
 	}
     total++;
-    printf("\nCliente cadastrado com sucesso\n");
+    printf("\nCliente cadastrado com sucesso!\n");
 }
 
 void listar() {
@@ -50,22 +50,33 @@ void listar() {
 void editar(){
 	int NumEdit;
 	int i;
+	int opcaoEdEx;
+	int excluir;
 	
 	if (total == 0) {
 		printf("\nNenum cliente cadastrado\n");
 		return;
 	}
 	
-	for (i = 0; i < total; i++){
-		printf("\n%d: Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
+	printf("\nEscolha uma opcao:\n");
+	printf("\n1 - Editar as informacoes de um Cadastro\n\n2 - Excluir um Cadastro\n\n");
+	scanf("%d", &opcaoEdEx);
+	
+	while(opcaoEdEx != 1 && opcaoEdEx != 2){
+		printf("\nOpcao invalida, tente novamente:\n");
+		scanf("%d", &opcaoEdEx);
 	}
-	   printf("\n\nQual cadastro gostaria de editar? (Insira o ID do usuario)\n");
+	
+	if (opcaoEdEx == 1){
+		for (i = 0; i < total; i++){
+		 printf("\n%d - Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
+	 }
+	   printf("\n\nQual cadastro gostaria de editar? (Insira o ID do usuario)\n\n");
 	   scanf("%d", &NumEdit);
 	   NumEdit--;
-	   
 
-	while(NumEdit < 0 || NumEdit >= total){
-		printf("\nID invalido, tente novamente:");
+	 while(NumEdit < 0 || NumEdit >= total){
+		printf("\nID invalido, tente novamente:\n");
 		scanf("%d", &NumEdit);
 		NumEdit--;
 	}
@@ -77,14 +88,43 @@ void editar(){
     scanf("%d", &clientes[NumEdit].idade);
 
     printf("\nEdicao realizada com sucesso!\n");
-
+    return;
+    }
+    
+    if (opcaoEdEx == 2){
+    	for(i = 0; i < total; i++){
+    		printf("\n%d - Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
+		}
+		printf("\nQual cadastro gostaria de excluir? (Insira o ID do usuario)\n\n");
+		scanf("%d", &excluir);
+		excluir--;
+		
+		while(excluir < 0 || excluir >= total){
+			printf("ID invalido, tente novamente:\n");
+			scanf("%d", &excluir);
+			excluir--;
+		}
+		
+	    for (i = excluir; i < total - 1; i++){
+            clientes[i] = clientes[i + 1];
+        }
+     total--;
+	}
+	
+	printf("\nExclusao de Cadastro com sucesso!\n");
+	return;
+    
 }
 
+void sair (){
+	return;
+}
 
 int main() {
     int opcao;
 
     do {
+    	printf("\nEscolha uma opcao:\n");
         printf("\n1 - Cadastrar\n2 - Listar\n3 - Editar\n0 - Sair\n\n");
         scanf("%d", &opcao);
 
@@ -98,11 +138,13 @@ int main() {
             case 3:
             	editar();
             	break;
+            case 0:
+            	sair();
+            	break;
             default:
             	printf("\nOpcao invalida, tente novamente:\n ");
             	break;
         }
     } while(opcao != 0);
     return 0;
-    
 }
