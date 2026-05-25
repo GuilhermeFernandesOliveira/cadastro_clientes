@@ -4,7 +4,7 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
   Cadastro de clientes, 
   Listagem de clientes, 
   Edição no cadastro de clientes,
-  Exclusão de cadastros de clientes,   
+  Exclusão de cadastros de clientes,
   Estrutura utilizando vetor e struct, 
   Casos de teste documentados.
 
