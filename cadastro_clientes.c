@@ -12,6 +12,15 @@ Cliente clientes[MAX];
 
 int total = 0;
 
+int lerInteiro(){
+    int valor;
+    while(scanf("%d", &valor) != 1){
+        printf("\nEntrada invalida, insira um numero: ");
+        while(getchar() != '\n');
+    }
+    return valor;
+}
+
 void cadastrar() {
     if (total >= MAX) {
         printf("Limite atingido\n");
@@ -22,7 +31,7 @@ void cadastrar() {
     scanf(" %[^\n]", clientes[total].nome);
     
     printf("\nIdade: ");
-    scanf("%d", &clientes[total].idade);
+    clientes[total].idade = lerInteiro();
     
     if (clientes[total].idade < 0){
 		while (clientes[total].idade < 0) {
@@ -60,11 +69,11 @@ void editar_exluir(){
 	
 	printf("\nEscolha uma opcao:\n");
 	printf("\n1 - Editar as informacoes de um Cadastro\n\n2 - Excluir um Cadastro\n\n3 - Voltar ao menu\n\n");
-	scanf("%d", &opcaoEdEx);
+	opcaoEdEx = lerInteiro();
 	
 	while(opcaoEdEx != 1 && opcaoEdEx != 2 && opcaoEdEx != 3){
 		printf("\nOpcao invalida, tente novamente:\n");
-		scanf("%d", &opcaoEdEx);
+		opcaoEdEx = lerInteiro();
 	}
 	
 	if (opcaoEdEx == 1){
@@ -72,12 +81,12 @@ void editar_exluir(){
 		 printf("\n%d - Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
 	 }
 	   printf("\n\nQual cadastro gostaria de editar? (Insira o ID do usuario)\n\n");
-	   scanf("%d", &NumEdit);
+	   NumEdit = lerInteiro();
 	   NumEdit--;
 
 	 while(NumEdit < 0 || NumEdit >= total){
 		printf("\nID invalido, tente novamente:\n");
-		scanf("%d", &NumEdit);
+		NumEdit = lerInteiro();
 		NumEdit--;
 	}
 	   
@@ -96,12 +105,12 @@ void editar_exluir(){
     		printf("\n%d - Nome: %s | Idade: %d", i + 1, clientes[i].nome, clientes[i].idade);
 		}
 		printf("\n\nQual cadastro gostaria de excluir? (Insira o ID do usuario)\n\n");
-		scanf("%d", &excluir);
+		excluir = lerInteiro();
 		excluir--;
 		
 		while(excluir < 0 || excluir >= total){
 			printf("ID invalido, tente novamente:\n");
-			scanf("%d", &excluir);
+			excluir = lerInteiro();
 			excluir--;
 		}
 		
@@ -113,8 +122,6 @@ void editar_exluir(){
      printf("\nExclusao de Cadastro com sucesso!\n");
 	 return;
 	}
-	
-
     
     if(opcaoEdEx == 3){
     	return;
@@ -128,7 +135,7 @@ int main() {
     do {
     	printf("\nEscolha uma opcao do menu:\n");
         printf("\n1 - Cadastrar\n2 - Listar\n3 - Editar\n0 - Sair\n\n");
-        scanf("%d", &opcao);
+        opcao = lerInteiro();
 
         switch(opcao) {
             case 1:
