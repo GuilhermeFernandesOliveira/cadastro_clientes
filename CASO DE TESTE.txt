@@ -75,7 +75,7 @@ Passos:
 2. Cadastrar Cliente
 3. Escolher a opção Editar
 4. Escolher a opção de Editar as informações de um Cadastro (Ou Excluir um Cadastro)
-5 Inserir ID -2 (ou um ID que não existe)
+5. Inserir ID -2 (ou um ID que não existe)
 
 Resultado esperado:
 Mensagem: "ID inválido, tente novamente:"
@@ -104,3 +104,15 @@ Passos:
 
 Resultado esperado:
 Voltar ao menu inicial novamente
+
+
+Teste 10 - Enviar uma Letra/Palavra/Frase ao invés de um Número
+
+Passos:
+1. Abrir o sistema
+2. Inserir a letra H
+
+Resultado esperado:
+Mensagem: "Entrada inválida, insira um numero:"
+
+(Este teste se aplica em todas as ocasiões em que se pede um número para ser inserido)
