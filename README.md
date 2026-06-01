@@ -5,7 +5,8 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
 - Listagem de clientes
 - Edição no cadastro de clientes
 - Exclusão de cadastros de clientes
-- Estrutura utilizando vetor e struct
+- Estrutura utilizando vetor e struct funções, estruturas de decisão e estruturas de repetição.
+- Aplicação dos conceitos de CRUD e manipulação de dados em memória. 
 
 ## Objetivo
 Praticar conceitos de programação e aplicar noções básicas de testes de software e validação de funcionalidades.
