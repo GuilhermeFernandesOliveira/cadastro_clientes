@@ -1,5 +1,6 @@
 CASO DE TESTE
 
+
 Teste 1 - Opção inválida
 
 Passos:
@@ -8,6 +9,7 @@ Passos:
 
 Resultado esperado:
 Mensagem: "Opção inválida, tente novamente:"
+
 
 Teste 2 - Cadastro válido
 
